@@ -1,3 +1,4 @@
+
 :root {
     --min-vw: 36rem;
     --wc-padding: 2.5rem;
@@ -47,22 +48,6 @@
     z-index: 999;
   }
   
-  #navbar ul {
-    display: flex;
-    padding: 1rem 3rem;
-    justify-content: flex-end;
-    gap: 2.2rem;
-    font-size: 1.6rem;
-  }
-  
-  #navbar a {
-    color: var(--main-white);
-  }
-  
-  #navbar a:hover {
-    color: white;
-  }
-  
   #welcome-section {
     display: flex;
     justify-content: center;
@@ -80,7 +65,7 @@
     width: 100vw;
     height: var(--wc-height);
     max-height: 45rem;
-    min-height: 35rem;
+    min-height: 36rem;
     position: absolute;
     left: 0%;
     margin-top: calc(-1 * var(--wc-padding));
@@ -92,38 +77,44 @@
   #wc-id {
     display: flex;
     align-items: center;
-    width: 35%;
+    width: 30%;
     max-width: calc(0.35 * var(--content-width));
   }
   
   #wc-id > div {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    gap: 1.6rem;
     justify-content: center;
-    height: calc(35rem - 2 * var(--wc-padding));
+    height: calc(36rem - 2 * var(--wc-padding));
+  }
+
+  #wc-id > div > div, #wc-logo {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
   }
   
   #wc-id > div > div {
-    border-radius: 3.75rem;
-    width: 7.5rem;
-    background-color: #ffffff18;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    background-color: #ffe4e126;
   }
   
   #wc-logo {
-    border-radius: 50%;
+    width: 6rem;
     background-color: #ffe4e126;
   }
   
   #wc-name {
-    align-self: flex-end;
-    height: fit-content;
     font-size: 6rem;
-    line-height: 4.5rem;
+    line-height: 5rem;
     writing-mode: vertical-rl;
     transform: scale(-1);
-    transform-origin: 50% 50%;
-    margin-bottom: 2.5rem;
-    margin-right: 1.4rem;
+    transform-origin: 45% 50%;
   }
   
   #wc-name span {
@@ -137,7 +128,7 @@
   #wc-msg {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 70%;
     max-width: calc(0.65 * var(--content-width));
     padding: 2rem;
     justify-content: center;
@@ -246,13 +237,9 @@
       max-width: unset;
     }
   
-    #navbar ul {
-      justify-content: center;
-    }
-  
     #wc-id {
       height: calc(var(--wc-height) - 2 * var(--wc-padding));
-      min-height: calc(35rem - 2 * var(--wc-padding));
+      min-height: calc(36rem - 2 * var(--wc-padding));
     }
   
     #wc-msg {
